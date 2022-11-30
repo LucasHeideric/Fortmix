@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Fortmix Admin - Clientes Físicos</title>
+  <title>Fortmix Admin - Novo Banner</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -422,7 +422,7 @@
 
     <!--! Page title  -->
     <div class="page-title d-flex align-items-center justify-content-between">
-      <h3>Clientes <span class="sub-título">Físicos</span></h3>
+      <h3>Novo Banner</h3>
       <!--* Modal  -->
       <button type="button" class="btn btn-primary d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#info-page">
         <i class="bi bi-info"></i>
@@ -431,14 +431,15 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Página <span>Clientes Físicos</span></h5>
+              <h5 class="modal-title">Página <span>Novo Banner</span></h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <p>Nessa página são armazenados todos os clientes, do tipo pessoa física, cadastrados no site. Aqui é possível fazer modificações nos cadastros, pesquisar dados e cadastrar novos usuários</p> <br>
-              <strong>> Ativo: </strong>caso o cliente <strong>não</strong> faça nenhuma visita ao site nos últimos 10 meses ele aparecerá como <strong>Inativo</strong> no sistema.<br>
+              <p>Essa página é feita especialmente para os banners comerciais e promocionais da loja.</p> <br>
+              <strong>> Sequência:</strong> é a ordem que o banner aparecerá no site.<br>
+              <strong>> Ativo: </strong>caso o banner <strong>não</strong> esteja ativo ele <strong>não</strong> aparecerá no site.<br>
               <div class="mt-4">
-                <span><i class="bi bi-exclamation-octagon"></i>Tome muito cuidado! Dados excluídos ou alterados nesta página não podem ser recuperados.</span>
+                <span><i class="bi bi-exclamation-octagon"></i>Não esqueça de sempre modificar quais banners estão ou não ativos!</span>
               </div>
             </div>
           </div>
@@ -447,222 +448,53 @@
     </div><!--! Fim da Page title  -->
 
     <section class="section dashboard">
-      <div class="row">
+      <form action="">
+        <div class="row">
 
-        <!--! Tabela  -->
-        <div class="table-box">
-          <table class="table table-hover datatable">
-            <thead>
-                <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Sobrenome</th>
-                    <th scope="col">CPF</th>
-                    <th scope="col">Telefone Celular</th>
-                    <th scope="col">E-mail</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>João</td>
-                    <td>Silva Cordeiro</td>
-                    <td>653.414.880-32</td>
-                    <td>(83) 98617-6215</td>
-                    <td>joaosilvacordeiro@fortmix.com</td>
-                    <td><button type="button" class="badge bg-success" style="background-color: gray!important;">Inativo</button></td>
-                    <td>
-                      <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirma-delete-1"><i class="bi bi-trash3"></i></button>
-                    </td>
+          <!--! Formulário  -->
+          <div class="form-box">
 
-                    <!--* Modal -->
-                    <div class="modal" id="confirma-delete-1" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                          <div class="modal-body d-flex">
+            <div class="form-son-box row d-flex align-items-center justify-content-center">
 
-                            <div class="exclamation-box">
-                              <i class="bi bi-exclamation-triangle text-danger"></i>
-                            </div>
-                            <div class="d-flex flex-column align-items-center">
-                              <p>Tem certeza que deseja <strong>deletar permanentemente</strong> o(a) cliente:
-                              <span class="text-danger"> <strong>João Silva Cordeiro</strong> </span></p>
+              <div class="col-lg-4">
+                  <label for="inputText" class="form-label">Descrição</label>
+                  <input type="text" class="form-control"                     name="descricao" id="descricao" required> <!--* descricao -->
+              </div>
+              <div class="col-lg-2">
+                <label for="inputText" class="form-label">Status</label>
+                <select class="form-select"                                   name="status" id="status"> <!--* status -->
+                  <option value="A" selected>Ativo</option>
+                  <option value="I">Inativo</option>
+                </select>
+              </div>
+              <div class="col-lg-1">
+                <label for="inputNumber" class="form-label">Sequência</label>
+                <input type="number" class="form-control"                     name="sequencia" id="sequencia">  <!--* sequencia -->
+              </div>
+              <div class="col-lg-4">
+                <div class="custom-file">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Banner</label>
+                  <input class="form-control " type="file" id="formFile"      name="banner" id="banner">  <!--* banner -->
+                </div>
+              </div>
 
-                              <div class="d-flex justify-content-end">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-danger">Confirmar</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div><!--* Fim do Modal  -->
-                </tr>
+            </div><!--! Fim dos inputs  -->
 
-                <tr>
-                  <td>Maria</td>
-                  <td>Sadovnik</td>
-                  <td>779.259.750-40</td>
-                  <td>(97) 98102-1162</td>
-                  <td>mariasadovnik@fortmix.com</td>
-                  <td><button type="button" class="badge bg-success" style="background-color: #46a733!important;">Ativo</button></td>
-                    <td>
-                      <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirma-delete-2"><i class="bi bi-trash3"></i></button>
-                    </td>
+            
+            <div class="submit-box d-flex align-items-centes justify-content-center mt-4">
+              <a href="banner.html" class="btn btn-secondary mx-2">Cancelar</a>
+              <button type="submit" class="btn btn-success mx-2"><i class="bi bi-plus-circle"></i> Salvar</button>
+            </div>
 
-                    <!--* Modal -->
-                    <div class="modal" id="confirma-delete-2" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                          <div class="modal-body d-flex">
-
-                            <div class="exclamation-box">
-                              <i class="bi bi-exclamation-triangle text-danger"></i>
-                            </div>
-                            <div class="d-flex flex-column align-items-center">
-                              <p>Tem certeza que deseja <strong>deletar permanentemente</strong> o(a) cliente:
-                              <span class="text-danger"> <strong>Maria Sadovnik</strong> </span></p>
-
-                              <div class="d-flex justify-content-end">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-danger">Confirmar</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div><!--* Fim do Modal  -->
-                </tr>
-
-                <tr>
-                    <td>Eduardo</td>
-                    <td>Cardoso Nevir</td>
-                    <td>076.013.660-22</td>
-                    <td>(99) 98661-0272</td>
-                    <td>eduardocardosonevir@fortmix.com</td>
-                    <td><button type="button" class="badge bg-success" style="background-color: #46a733!important;">Ativo</button></td>
-                    <td>
-                      <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirma-delete-3"><i class="bi bi-trash3"></i></button>
-                    </td>
-
-                    <!--* Modal -->
-                    <div class="modal" id="confirma-delete-3" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                          <div class="modal-body d-flex">
-
-                            <div class="exclamation-box">
-                              <i class="bi bi-exclamation-triangle text-danger"></i>
-                            </div>
-                            <div class="d-flex flex-column align-items-center">
-                              <p>Tem certeza que deseja <strong>deletar permanentemente</strong> o(a) cliente:
-                              <span class="text-danger"> <strong>Eduardo Cardoso Nevir</strong> </span></p>
-
-                              <div class="d-flex justify-content-end">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-danger">Confirmar</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div><!--* Fim do Modal  -->
-                </tr>
-
-                <tr>
-                    <td>Jonas</td>
-                    <td>Amorin de Jesus</td>
-                    <td>418.797.290-08</td>
-                    <td>(75) 98422-6457</td>
-                    <td>jonasamorinjesus@fortmix.com</td>
-                    <td><button type="button" class="badge bg-success" style="background-color: gray!important;">Inativo</button></td>
-                    <td>
-                      <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirma-delete-4"><i class="bi bi-trash3"></i></button>
-                    </td>
-
-                    <!--* Modal -->
-                    <div class="modal" id="confirma-delete-4" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                          <div class="modal-body d-flex">
-
-                            <div class="exclamation-box">
-                              <i class="bi bi-exclamation-triangle text-danger"></i>
-                            </div>
-                            <div class="d-flex flex-column align-items-center">
-                              <p>Tem certeza que deseja <strong>deletar permanentemente</strong> o(a) cliente:
-                              <span class="text-danger"> <strong>Jonas Amorin de Jesus</strong> </span></p>
-
-                              <div class="d-flex justify-content-end">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-danger">Confirmar</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div><!--* Fim do Modal  -->
-                </tr>
-
-                <tr>
-                    <td>Carmen Lúcia</td>
-                    <td>Bitencourt </td>
-                    <td>749.867.620-60</td>
-                    <td>(61) 98385-6440</td>
-                    <td>carmenluciabitencourt@fortmix.com</td>
-                    <td><button type="button" class="badge bg-success" style="background-color: #46a733!important;">Ativo</button></td>
-                    <td>
-                      <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i></button>
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirma-delete-5"><i class="bi bi-trash3"></i></button>
-                    </td>
-
-                    <!--* Modal -->
-                    <div class="modal" id="confirma-delete-5" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                          <div class="modal-body d-flex">
-
-                            <div class="exclamation-box">
-                              <i class="bi bi-exclamation-triangle text-danger"></i>
-                            </div>
-                            <div class="d-flex flex-column align-items-center">
-                              <p>Tem certeza que deseja <strong>deletar permanentemente</strong> o(a) cliente:
-                              <span class="text-danger"> <strong>Carmen Lúcia Bitencourt</strong> </span></p>
-
-                              <div class="d-flex justify-content-end">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-danger">Confirmar</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div><!--* Fim do Modal  -->
-                    
-                </tr>
-            </tbody>
-          </table><!--! Fim da Tabela  -->
-
-          <div class="submit-box d-flex align-items-centes justify-content-end">
-            <a href="cadastro-cliente-fisico.html" class="btn btn-success"><i class="bi bi-plus-circle"></i> Novo Cadastro</a>
           </div>
         </div>
-
-
-
-
-        
-      </div>
+      </form>
     </section>
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer" style="position: absolute;bottom: 0;right: 0;left:0;">
     <div class="copyright">
       &copy; Copyright <strong><span>Fortmix Atacado</span></strong>. Todos direitos reservados
     </div>
